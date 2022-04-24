@@ -1,0 +1,41 @@
+.caption {
+  color: $color-alice-blue;
+  position: absolute;
+  top: 17rem;
+  padding-left: 92px;
+
+  @media(max-width:$vp-1365) {
+    padding-left: 0;
+  }
+
+  @media(max-width:$vp-767) {
+   top: 11rem;
+  }
+}
+
+.caption h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  margin: 0;
+  padding-bottom: 10px;
+
+  @media(max-width:$vp-1365) {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @media(max-width:$vp-767) {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.caption p {
+  font-size: 20px;
+  margin: 0;
+
+  @media(max-width:$vp-1365) {
+  font-size: 18px;
+  }
+}
