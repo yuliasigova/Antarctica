@@ -1,0 +1,170 @@
+.advantage {
+  margin-bottom: 112px;
+  height: 562px;
+  background: url("../../img/background-desktop.png") no-repeat ;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) and (min-width: 1365px) {
+    height: 562px;
+    background: url("../../img/background-desktop@2x.png") no-repeat ;
+    background-size: cover;
+  }
+
+  @media (max-width: $vp-1365) {
+    margin-bottom: 100px;
+    height: 588px;
+    background: url("../../img/background-tablet.png") no-repeat ;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      height: 588px;
+      background: url("../../img/background-tablet@2x.png") no-repeat ;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 55px;
+    height: 997px;
+    background: url("../../img/background-mobile.png") no-repeat ;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      height: 997px;
+      background: url("../../img/background-mobile@2x.png") no-repeat ;
+      background-size: cover;
+    }
+  }
+}
+
+.advantage h2 {
+  margin: 0;
+  padding-top: 110px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+
+  @media (max-width: $vp-1365) {
+    font-size: 26px;
+    line-height: 39px;
+    padding-top: 90px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 24px;
+    line-height: 36px;
+    padding-top: 56px;
+  }
+}
+
+.advantage ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 52px;
+  grid-gap: 40px;
+
+  @media (max-width: $vp-1365) {
+    grid-gap: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    margin-top: 29px;
+  }
+}
+
+.advantage__card {
+  background-color: $color-alice-blue;
+  padding-top: 77px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 241px;
+  position: relative;
+
+  @media (max-width: $vp-1365) {
+    padding-left: 20px;
+    padding-right: 0;
+    padding-top: 69px;
+    min-height: 310px;
+  }
+
+  @media (max-width: $vp-767) {
+    min-height: 249px;
+  }
+
+  &--liner::before {
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 32px;
+      top: 26px;
+      left: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/svg/icon-liner.svg");
+        @media (max-width: $vp-1365) {
+          width: 21px;
+          height: 26px;
+          top: 24px;
+          left: 23px;
+        }
+  }
+
+  &--tick::before {
+    content: "";
+      position: absolute;
+      width: 38px;
+      height: 21px;
+      top: 31px;
+      left: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/svg/icon-tick.svg");
+      @media (max-width: $vp-1365) {
+        width: 33px;
+        height: 19px;
+        top: 26px;
+        left: 23px;
+      }
+  }
+
+  &--ship::before {
+    content: "";
+      position: absolute;
+      width: 42px;
+      height: 15px;
+      top: 34px;
+      left: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/svg/icon-ship.svg");
+
+      @media (max-width: $vp-1365) {
+        width: 38px;
+        height: 13px;
+        top: 30px;
+        left: 23px;
+      }
+  }
+}
+
+.advantage__card h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.advantage__card p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  @media (max-width: $vp-1365) {
+    padding-right: 17px;
+  }
+}

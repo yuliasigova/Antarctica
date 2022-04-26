@@ -1,0 +1,182 @@
+.booking {
+  margin-top: 120px;
+  height: 555px;
+  background: url("../../img/background-form-desktop.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  @media (min-resolution: 2dppx) and (min-width: 1365px) {
+    height: 555px;
+    background: url("../../img/background-form-desktop@2x.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  @media (max-width: $vp-1365) {
+    height: 805px;
+    margin-top: 112px;
+    background: url("../../img/background-form-tablet.jpg") no-repeat center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+    height: 805px;
+    background: url("../../img/background-form-tablet@2x.jpg") no-repeat center;
+    background-size: cover;
+    }
+  }
+
+  @media (max-width: $vp-767)  {
+    height: 760px;
+    margin-top: 70px;
+    background: url("../../img/background-form-mobile.jpg") no-repeat center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      height: 760px;
+      background: url("../../img/background-form-mobile@2x.jpg") no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
+.booking__wrapper {
+  display: grid;
+  grid-template-columns: 560px 401px;
+  padding-top: 50px;
+  grid-column-gap: 140px;
+
+  @media (max-width: $vp-1365) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking__container {
+  padding-left: 60px;
+
+  @media (max-width: $vp-1365) {
+    padding-left: 0;
+  }
+}
+
+.booking__container h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0;
+  margin-top: 168px;
+
+  @media (max-width: $vp-1365) {
+    margin-top: 34px;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 55px;
+  }
+}
+
+.booking__container p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-top: 7px;
+
+  @media (max-width: $vp-1365) {
+    text-align: center;
+    margin-bottom: 54px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 16px;
+    margin-bottom: 35px;
+  }
+}
+
+.booking__form {
+  padding: 50px;
+  width: 403px;
+  background: $color-tangaroa;
+  justify-self: center;
+
+  @media (max-width: $vp-1365) {
+    padding-top: 44px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 290px;
+    padding: 32px 30px;
+  }
+}
+
+.booking__form fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking__form legend {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin-bottom: 25px;
+
+  @media (max-width: $vp-767) {
+    line-height: 25px;
+    padding: 0 8px;
+    text-align: center;
+  }
+}
+
+.booking__form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  background: $color-alice-blue;
+  width: 303px;
+
+  @media (max-width: $vp-767) {
+    width: 230px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+
+.booking__form input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+}
+
+.booking__form span  {
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-alice-blue;
+
+  @media (max-width: $vp-767) {
+    line-height: 12px;
+    display: block;
+  }
+}
+
+.booking__form button {
+  border: none;
+  background: $color-alice-blue;
+  padding: 10px;
+  margin-top: 13px;
+  width: 303px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: $vp-767) {
+    width: 230px;
+  }
+}

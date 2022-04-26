@@ -1,0 +1,137 @@
+.cruises h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin:0;
+  margin-bottom: 50px;
+
+  @media (max-width: $vp-1365) {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 32px;
+  }
+}
+
+.cruises ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 260px);
+  grid-gap: 30px;
+  padding: 0 15px;
+
+  @media (max-width: $vp-1365) {
+    grid-template-columns: repeat(auto-fit, 309px);
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: repeat(auto-fit, 270px);
+    padding: 0 10px;
+    grid-gap: 26px;
+  }
+}
+
+.cruises__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cruises__card h3 {
+  margin: 0;
+  order: 3;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: -52px;
+  padding-bottom: 22px;
+  padding-left: 30px;
+  color: $color-alice-blue;
+
+  @media (max-width: $vp-767) {
+    margin-top: -46px;
+  }
+
+}
+
+.cruises__layout {
+  background: $color-tangaroa;
+  padding: 28px 25px;
+  box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+  position: absolute;
+  width: 260px;
+  height: 386px;
+  font-size: 14px;
+  display: none;
+
+  @media (max-width: $vp-1365) {
+    width: 309px;
+    padding: 28px 35px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 270px;
+    padding: 28px 25px;
+  }
+}
+
+.cruises__layout h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 13px;
+
+  @media (max-width: $vp-767) {
+    margin-top: 0;
+  }
+}
+
+.cruises__layout dl {
+  color: $color-alice-blue;
+  margin: 0;
+}
+
+.cruises__layout dt {
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.cruises__layout dd {
+  margin: 0;
+  line-height: 20px;
+  color: $color-quartz;
+  margin-bottom: 12px;
+}
+
+.cruises__layout a {
+  display: block;
+  width: 210px;
+  background: $color-alice-blue;
+  color: $color-tangaroa;
+  font-weight: 600;
+  line-height: 21px;
+  padding: 9px;
+  margin-top: 27px;
+  text-align: center;
+
+  @media (max-width: $vp-1365) {
+    width: 239px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 220px;
+  }
+}
+
+.cruises__card:focus-within .cruises__layout,
+.cruises__card:hover .cruises__layout {
+    display: block;
+}

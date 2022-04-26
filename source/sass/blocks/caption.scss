@@ -2,7 +2,7 @@
   color: $color-alice-blue;
   position: absolute;
   top: 17rem;
-  padding-left: 92px;
+  padding-left: 198px;
 
   @media(max-width:$vp-1365) {
     padding-left: 0;
@@ -37,5 +37,6 @@
 
   @media(max-width:$vp-1365) {
   font-size: 18px;
+  line-height: 22px;
   }
 }

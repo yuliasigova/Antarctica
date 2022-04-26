@@ -1,22 +1,17 @@
 .container {
   width: 100%;
-  max-width: $vp-1920;
+  max-width: 1160px;
   margin: 0 auto;
 
-    @media(min-width: $vp-1366) {
-    min-width: 1160px;
-    padding-left: 103px;
-    padding-right: 103px;
+    @media(max-width: 1159px) {
+      min-width: 768px;
+      max-width: 1159px;
+      padding-left: 45px;
+      padding-right: 45px;
     }
 
-    @media(max-width: $vp-1365) {
-      min-width: $vp-768;
-      max-width: 1160px;
-      padding: 0 45px;
-    }
-
-    @media(max-width: $vp-767) {
-      min-width: $vp-320;
+    @media(max-width: 767px) {
+      min-width: 320px;
       padding: 0 15px;
     }
 }
