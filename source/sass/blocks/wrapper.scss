@@ -24,6 +24,7 @@
 
   @media (max-width: $vp-767)  {
     height: 500px;
+    position: relative;
     background: url("../../img/main-background-mobile.jpg") no-repeat top center;
     background-size: cover;
 

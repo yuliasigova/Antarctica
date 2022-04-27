@@ -102,6 +102,7 @@
   width: 403px;
   background: $color-tangaroa;
   justify-self: center;
+  box-shadow: 0px 4px 45px $color-tangaroa--15;
 
   @media (max-width: $vp-1365) {
     padding-top: 44px;
@@ -110,6 +111,11 @@
   @media (max-width: $vp-767) {
     width: 290px;
     padding: 32px 30px;
+  }
+
+  &--checkbox {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -140,25 +146,33 @@
   margin-bottom: 20px;
   background: $color-alice-blue;
   width: 303px;
+  border: none;
+  padding: 11px 0 11px 15px;
 
   @media (max-width: $vp-767) {
     width: 230px;
+  }
+
+  &::placeholder {
     font-size: 14px;
     line-height: 21px;
+    color: $color-tangaroa--70;
   }
 }
 
-
 .booking__form input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-bottom: 0;
+  appearance: none;
+  cursor: auto;
 }
 
 .booking__form span  {
   font-size: 10px;
   line-height: 13px;
   color: $color-alice-blue;
+  align-self: center;
 
   @media (max-width: $vp-767) {
     line-height: 12px;
@@ -170,7 +184,7 @@
   border: none;
   background: $color-alice-blue;
   padding: 10px;
-  margin-top: 13px;
+  margin-top: 30px;
   width: 303px;
   font-weight: 600;
   font-size: 14px;
@@ -179,4 +193,18 @@
   @media (max-width: $vp-767) {
     width: 230px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
+
+.booking__form input[type="checkbox"]:checked {
+  background-image: url("../img/svg/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+}
+
+

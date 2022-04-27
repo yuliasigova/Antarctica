@@ -9,17 +9,10 @@
 
   @media (max-width: $vp-767) {
     padding-top: 22px;
-
-    &--close {
-      position: absolute;
-      background-color: red;
-      top:0;
-      right: 0;
-      width: 285px;
-  }
-
+    grid-template-columns: 1fr;
 }
 }
+
 .page-header img {
   &:hover,
   &:focus {
@@ -35,5 +28,4 @@
     width: 42px;
     height: 22px;
   }
-
 }

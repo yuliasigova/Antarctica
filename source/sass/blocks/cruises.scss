@@ -129,6 +129,11 @@
   @media (max-width: $vp-767) {
     width: 220px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .cruises__card:focus-within .cruises__layout,
