@@ -4,12 +4,12 @@
   top: 17rem;
   padding-left: 198px;
 
-  @media(max-width:$vp-1365) {
+  @media (max-width: $vp-1365) {
     padding-left: 0;
   }
 
-  @media(max-width:$vp-767) {
-   top: 11rem;
+  @media (max-width: $vp-767) {
+    top: 11rem;
   }
 }
 
@@ -20,12 +20,12 @@
   margin: 0;
   padding-bottom: 10px;
 
-  @media(max-width:$vp-1365) {
+  @media (max-width: $vp-1365) {
     font-size: 50px;
     line-height: 61px;
   }
 
-  @media(max-width:$vp-767) {
+  @media (max-width: $vp-767) {
     font-size: 36px;
     line-height: 45px;
   }
@@ -35,8 +35,14 @@
   font-size: 20px;
   margin: 0;
 
-  @media(max-width:$vp-1365) {
-  font-size: 18px;
-  line-height: 22px;
+  @media (max-width: $vp-1365) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (max-width: $vp-767) {
+    min-width: 199px;
+    padding-right: 52px;
+    letter-spacing: -1px;
   }
 }

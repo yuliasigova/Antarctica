@@ -2,11 +2,13 @@
   height: 650px;
   background: url("../../img/main-background-desktop.jpg") no-repeat top center;
   background-size: cover;
+  background-color: $color-prussian-blue;
 
   @media (min-resolution: 2dppx) and (min-width: 1365px) {
     height: 650px;
     background: url("../../img/main-background-desktop@2x.jpg") no-repeat top center;
     background-size: cover;
+    background-color: $color-prussian-blue;
   }
 
   @media (max-width: $vp-1365) {
@@ -16,13 +18,13 @@
 
 
     @media (min-resolution: 2dppx) {
-    height: 638px;
-    background: url("../../img/main-background-tablet@2x.jpg") no-repeat top center ;
-    background-size: cover;
+      height: 638px;
+      background: url("../../img/main-background-tablet@2x.jpg") no-repeat top center;
+      background-size: cover;
     }
   }
 
-  @media (max-width: $vp-767)  {
+  @media (max-width: $vp-767) {
     height: 500px;
     position: relative;
     background: url("../../img/main-background-mobile.jpg") no-repeat top center;

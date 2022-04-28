@@ -1,24 +1,26 @@
 .advantage {
   margin-bottom: 112px;
   height: 562px;
-  background: url("../../img/background-desktop.png") no-repeat ;
+  background: url("../../img/background-desktop.png") no-repeat;
+  background-color: $color-solitude;
   background-size: cover;
 
   @media (min-resolution: 2dppx) and (min-width: 1365px) {
     height: 562px;
-    background: url("../../img/background-desktop@2x.png") no-repeat ;
+    background: url("../../img/background-desktop@2x.png") no-repeat;
+    background-color: $color-solitude;
     background-size: cover;
   }
 
   @media (max-width: $vp-1365) {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
     height: 588px;
-    background: url("../../img/background-tablet.png") no-repeat ;
+    background: url("../../img/background-tablet.png") no-repeat;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
       height: 588px;
-      background: url("../../img/background-tablet@2x.png") no-repeat ;
+      background: url("../../img/background-tablet@2x.png") no-repeat;
       background-size: cover;
     }
   }
@@ -26,12 +28,12 @@
   @media (max-width: $vp-767) {
     margin-bottom: 55px;
     height: 997px;
-    background: url("../../img/background-mobile.png") no-repeat ;
+    background: url("../../img/background-mobile.png") no-repeat;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
       height: 997px;
-      background: url("../../img/background-mobile@2x.png") no-repeat ;
+      background: url("../../img/background-mobile@2x.png") no-repeat;
       background-size: cover;
     }
   }
@@ -96,58 +98,60 @@
   }
 
   &--liner::before {
-      content: "";
-      position: absolute;
-      width: 27px;
-      height: 32px;
-      top: 26px;
-      left: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url("../img/svg/icon-liner.svg");
-        @media (max-width: $vp-1365) {
-          width: 21px;
-          height: 26px;
-          top: 24px;
-          left: 23px;
-        }
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 32px;
+    top: 26px;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/svg/icon-liner.svg");
+
+    @media (max-width: $vp-1365) {
+      width: 21px;
+      height: 26px;
+      top: 24px;
+      left: 23px;
+    }
   }
 
   &--tick::before {
     content: "";
-      position: absolute;
-      width: 38px;
-      height: 21px;
-      top: 31px;
-      left: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url("../img/svg/icon-tick.svg");
-      @media (max-width: $vp-1365) {
-        width: 33px;
-        height: 19px;
-        top: 26px;
-        left: 23px;
-      }
+    position: absolute;
+    width: 38px;
+    height: 21px;
+    top: 31px;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/svg/icon-tick.svg");
+
+    @media (max-width: $vp-1365) {
+      width: 33px;
+      height: 19px;
+      top: 26px;
+      left: 23px;
+    }
   }
 
   &--ship::before {
     content: "";
-      position: absolute;
-      width: 42px;
-      height: 15px;
-      top: 34px;
-      left: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url("../img/svg/icon-ship.svg");
+    position: absolute;
+    width: 42px;
+    height: 15px;
+    top: 34px;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/svg/icon-ship.svg");
 
-      @media (max-width: $vp-1365) {
-        width: 38px;
-        height: 13px;
-        top: 30px;
-        left: 23px;
-      }
+    @media (max-width: $vp-1365) {
+      width: 38px;
+      height: 13px;
+      top: 30px;
+      left: 23px;
+    }
   }
 }
 
@@ -158,13 +162,30 @@
   margin: 0;
   margin-bottom: 10px;
   text-align: left;
+
+  @media (max-width: $vp-767) {
+    padding-right: 100px;
+  }
 }
 
 .advantage__card p {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+
   @media (max-width: $vp-1365) {
     padding-right: 17px;
   }
+
+  @media (max-width: $vp-767) {
+    padding-right: 22px;
+  }
+}
+
+.advantage__card--tick p {
+  padding-right: 20px;
+}
+
+.advantage__card--ship p {
+  padding-right: 50px;
 }

@@ -9,8 +9,8 @@
 
   @media (max-width: $vp-767) {
     padding-top: 22px;
-    grid-template-columns: 1fr;
-}
+    display: flex;
+  }
 }
 
 .page-header img {

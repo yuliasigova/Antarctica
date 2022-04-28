@@ -46,14 +46,14 @@
 
 .footer-nav__list {
   align-self: center;
-  margin-left: 37px;
+  margin-left: 40px;
 
   @media (max-width: $vp-1365) {
     margin-left: 25px;
   }
 
   @media (max-width: $vp-767) {
-   margin-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -63,7 +63,6 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 
   @media (max-width: $vp-767) {
     margin-top: 28px;
@@ -76,7 +75,7 @@
   font-size: 16px;
   line-height: 20px;
   color: $color-alice-blue;
-  margin-right: 30px;
+  margin-right: 33px;
 
   &:hover,
   &:focus {
@@ -96,6 +95,7 @@
 }
 
 .footer-nav__social {
+  align-self: center;
 
   @media (max-width: $vp-767) {
     align-self: end;
@@ -116,6 +116,7 @@
     width: 87px;
   }
 }
+
 .footer-nav__social svg {
   fill: $color-alice-blue;
 
@@ -130,6 +131,7 @@
       height: 16px;
     }
   }
+
   &--insta {
     @media (max-width: $vp-767) {
       width: 16px;
@@ -141,6 +143,6 @@
     @media (max-width: $vp-767) {
       width: 16px;
       height: 13px;
-   }
+    }
   }
 }

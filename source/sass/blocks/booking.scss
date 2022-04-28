@@ -1,13 +1,15 @@
 .booking {
-  margin-top: 120px;
+  margin-top: 123px;
   height: 555px;
   background: url("../../img/background-form-desktop.jpg") no-repeat center;
   background-size: cover;
+  background-color: $color-solitude;
   position: relative;
 
   @media (min-resolution: 2dppx) and (min-width: 1365px) {
     height: 555px;
     background: url("../../img/background-form-desktop@2x.jpg") no-repeat center;
+    background-color: $color-solitude;
     background-size: cover;
   }
 
@@ -18,13 +20,14 @@
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-    height: 805px;
-    background: url("../../img/background-form-tablet@2x.jpg") no-repeat center;
-    background-size: cover;
+      height: 805px;
+      background: url("../../img/background-form-tablet@2x.jpg") no-repeat
+        center;
+      background-size: cover;
     }
   }
 
-  @media (max-width: $vp-767)  {
+  @media (max-width: $vp-767) {
     height: 760px;
     margin-top: 70px;
     background: url("../../img/background-form-mobile.jpg") no-repeat center;
@@ -32,7 +35,8 @@
 
     @media (min-resolution: 2dppx) {
       height: 760px;
-      background: url("../../img/background-form-mobile@2x.jpg") no-repeat center;
+      background: url("../../img/background-form-mobile@2x.jpg") no-repeat
+        center;
       background-size: cover;
     }
   }
@@ -62,7 +66,7 @@
   font-size: 40px;
   line-height: 60px;
   margin: 0;
-  margin-top: 168px;
+  margin-top: 164px;
 
   @media (max-width: $vp-1365) {
     margin-top: 34px;
@@ -99,10 +103,11 @@
 
 .booking__form {
   padding: 50px;
+  padding-top: 43px;
   width: 403px;
   background: $color-tangaroa;
   justify-self: center;
-  box-shadow: 0px 4px 45px $color-tangaroa--15;
+  box-shadow: 0 4px 45px $color-tangaroa--15;
 
   @media (max-width: $vp-1365) {
     padding-top: 44px;
@@ -115,7 +120,6 @@
 
   &--checkbox {
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -132,7 +136,7 @@
   font-size: 18px;
   line-height: 27px;
   color: $color-alice-blue;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @media (max-width: $vp-767) {
     line-height: 25px;
@@ -142,8 +146,7 @@
 }
 
 .booking__form input {
-  padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   background: $color-alice-blue;
   width: 303px;
   border: none;
@@ -168,11 +171,12 @@
   cursor: auto;
 }
 
-.booking__form span  {
+.booking__form span {
   font-size: 10px;
   line-height: 13px;
   color: $color-alice-blue;
   align-self: center;
+  margin-left: 6px;
 
   @media (max-width: $vp-767) {
     line-height: 12px;
@@ -184,7 +188,7 @@
   border: none;
   background: $color-alice-blue;
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 27px;
   width: 303px;
   font-weight: 600;
   font-size: 14px;
@@ -206,5 +210,3 @@
   background-size: 16px;
   background-position: center;
 }
-
-

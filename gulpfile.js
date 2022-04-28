@@ -23,7 +23,7 @@ const css = () => {
       .pipe(postcss([autoprefixer({
         grid: true,
       })]))
-      .pipe(gcmq()) // выключите, если в проект импортятся шрифты через ссылку на внешний источник
+      .pipe(gcmq())
       .pipe(gulp.dest('build/css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))
@@ -88,7 +88,7 @@ const clean = () => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    index: 'sitemap.html',
+    index: 'index.html',
     notify: false,
     open: true,
     cors: true,
@@ -116,15 +116,6 @@ const refresh = (done) => {
 const build = gulp.series(clean, svgo, copy, css, sprite, js);
 
 const start = gulp.series(build, syncServer);
-
-// Optional tasks
-//---------------------------------
-
-// Используйте отличное от дефолтного значение root, если нужно обработать отдельную папку в img,
-// а не все изображения в img во всех папках.
-
-// root = '' - по дефолту webp добавляются и обналяются во всех папках в source/img/
-// root = 'content/' - webp добавляются и обновляются только в source/img/content/
 
 const createWebp = () => {
   const root = '';

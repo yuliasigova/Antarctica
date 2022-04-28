@@ -1,17 +1,17 @@
 .main-nav {
   align-self: center;
   justify-self: right;
+}
 
-  &--opened {
-    @media (max-width: $vp-767) {
-      height: 568px;
-      background: $color-alice-blue;
-      width: 285px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 1;
-    }
+[data-menu="menu"].is-active {
+  @media (max-width: $vp-767) {
+    height: 568px;
+    background: $color-alice-blue;
+    width: 285px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
   }
 }
 
@@ -45,10 +45,15 @@
 
   @media (max-width: $vp-767) {
     display: block;
+    position: absolute;
     width: 24px;
     height: 24px;
+    top: 22px;
+    right: 15px;
     border: none;
     background: transparent;
+    cursor: pointer;
+
     &::after {
       content: "";
 
@@ -56,9 +61,9 @@
       width: 24px;
       height: 2px;
       background-color: $color-alice-blue;
-      box-shadow: 0 8px 0 0 $color-alice-blue, 0 16px 0 0 $color-alice-blue;
-      top: 20px;
-      right: 15px;
+      box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -80,26 +85,26 @@
     margin-bottom: 28px;
     display: block;
   }
+
   &:hover,
   &:focus {
     opacity: 0.6;
   }
 }
 
-.main-nav--closed ul {
+[data-menu="menu"].is-close ul {
   display: none;
 }
 
-.main-nav--opened button {
-
+[data-menu="menu"].is-active button {
   @media (max-width: $vp-767) {
     &::after {
       content: "";
       position: absolute;
       width: 42px;
       height: 22px;
-      top: 19px;
-      right: 0;
+      top: -3px;
+      left: 0;
       background-repeat: no-repeat;
       background-position: center;
       background-image: url("../img/svg/icon-close.svg");
@@ -108,11 +113,11 @@
   }
 }
 
-.main-nav--opened ul {
+[data-menu="menu"].is-active ul {
   @media (max-width: $vp-767) {
     display: block;
     padding-left: 25px;
-    padding-top: 62px;
+    padding-top: 82px;
 
     &::before {
       content: "";

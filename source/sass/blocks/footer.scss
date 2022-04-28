@@ -22,7 +22,7 @@
 
   @media (max-width: $vp-767) {
     grid-template-columns: auto;
-    gap: 30px;
+    gap: 36px;
   }
 }
 
@@ -33,12 +33,12 @@
   display: grid;
 
   @media (max-width: $vp-1365) {
-   margin-top: 130px;
-   min-height: 120px;
+    margin-top: 130px;
+    min-height: 120px;
   }
 
   @media (max-width: $vp-767) {
-    margin-top: 74px;
+    margin-top: 75px;
     min-height: 283px;
   }
 }
