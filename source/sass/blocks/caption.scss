@@ -4,10 +4,6 @@
   top: 17rem;
   padding-left: 198px;
 
-  @media (max-width: $vp-1365) {
-    padding-left: 0;
-  }
-
   @media (max-width: $vp-767) {
     top: 11rem;
   }

@@ -17,12 +17,13 @@
     height: 805px;
     margin-top: 112px;
     background: url("../../img/background-form-tablet.jpg") no-repeat center;
+    background-color: $color-solitude;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
       height: 805px;
-      background: url("../../img/background-form-tablet@2x.jpg") no-repeat
-        center;
+      background: url("../../img/background-form-tablet@2x.jpg") no-repeat center;
+      background-color: $color-solitude;
       background-size: cover;
     }
   }
@@ -31,12 +32,13 @@
     height: 760px;
     margin-top: 70px;
     background: url("../../img/background-form-mobile.jpg") no-repeat center;
+    background-color: $color-solitude;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
       height: 760px;
-      background: url("../../img/background-form-mobile@2x.jpg") no-repeat
-        center;
+      background: url("../../img/background-form-mobile@2x.jpg") no-repeat center;
+      background-color: $color-solitude;
       background-size: cover;
     }
   }

@@ -1,6 +1,15 @@
 .contacts__map {
   position: relative;
   height: 306px;
+
+  @media (max-width: $vp-1365) {
+    height: 335px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 290px;
+    height: 316px;
+  }
 }
 
 .contact__img {
@@ -19,6 +28,15 @@
   height: 100%;
   border: none;
   position: absolute;
+
+  @media (max-width: $vp-1365) {
+    height: 335px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 290px;
+    height: 316px;
+  }
 }
 
 .contacts__location {

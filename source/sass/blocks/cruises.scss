@@ -138,3 +138,13 @@
 .cruises__card:hover .cruises__layout {
   display: block;
 }
+
+.cruises img {
+  @media (max-width: $vp-1365) {
+    width: 309px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 270px;
+  }
+}

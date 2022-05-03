@@ -14,12 +14,14 @@
   @media (max-width: $vp-1365) {
     height: 638px;
     background: url("../../img/main-background-tablet.jpg") no-repeat top center;
+    background-color: $color-prussian-blue;
     background-size: cover;
 
 
     @media (min-resolution: 2dppx) {
       height: 638px;
       background: url("../../img/main-background-tablet@2x.jpg") no-repeat top center;
+      background-color: $color-prussian-blue;
       background-size: cover;
     }
   }
@@ -28,11 +30,13 @@
     height: 500px;
     position: relative;
     background: url("../../img/main-background-mobile.jpg") no-repeat top center;
+    background-color: $color-prussian-blue;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
       height: 500px;
       background: url("../../img/main-background-mobile@2x.jpg") no-repeat top center;
+      background-color: $color-prussian-blue;
       background-size: cover;
     }
   }
