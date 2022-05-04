@@ -636,6 +636,10 @@ button,
   display: none;
 }
 
+[data-menu=menu].no-js button {
+  display: none;
+}
+
 .caption {
   color: #f9fbfd;
   position: absolute;
@@ -1527,7 +1531,8 @@ button,
     height: 22px;
   }
 
-  [data-menu=menu].is-active {
+  [data-menu=menu].is-active,
+  [data-menu=menu].no-js {
     height: 568px;
     background: #f9fbfd;
     width: 285px;
@@ -1586,13 +1591,15 @@ button,
     cursor: pointer;
   }
 
-  [data-menu=menu].is-active ul {
+  [data-menu=menu].is-active ul,
+  [data-menu=menu].no-js ul {
     display: block;
     padding-left: 25px;
     padding-top: 82px;
   }
 
-  [data-menu=menu].is-active ul::before {
+  [data-menu=menu].is-active ul::before,
+  [data-menu=menu].no-js ul::before {
     content: "";
     position: absolute;
     width: 42px;

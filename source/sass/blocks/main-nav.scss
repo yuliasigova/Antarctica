@@ -3,7 +3,8 @@
   justify-self: right;
 }
 
-[data-menu="menu"].is-active {
+[data-menu="menu"].is-active,
+[data-menu="menu"].no-js {
   @media (max-width: $vp-767) {
     height: 568px;
     background: $color-alice-blue;
@@ -113,7 +114,8 @@
   }
 }
 
-[data-menu="menu"].is-active ul {
+[data-menu="menu"].is-active ul,
+[data-menu="menu"].no-js ul {
   @media (max-width: $vp-767) {
     display: block;
     padding-left: 25px;
@@ -131,4 +133,8 @@
       background-image: url("../img/svg/logo-menu.svg");
     }
   }
+}
+
+[data-menu="menu"].no-js button {
+  display: none;
 }

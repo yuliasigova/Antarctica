@@ -95,6 +95,10 @@
 
 var navMain = document.querySelector('[data-menu]');
 
+if (navMain.classList.contains('no-js')) {
+  navMain.classList.remove('no-js');
+}
+
 var menuClickHandler = function menuClickHandler() {
   if (navMain) {
     var button = navMain.querySelector('button');
