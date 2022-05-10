@@ -1,7 +1,7 @@
 .footer {
-  margin-top: 120px;
+  margin-top: 122px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-top: 100px;
   }
 
@@ -15,7 +15,7 @@
   grid-template-columns: 560px auto;
   gap: 100px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     grid-template-columns: 324px auto;
     gap: 30px;
   }
@@ -32,13 +32,13 @@
   min-height: 138px;
   display: grid;
 
-  @media (max-width: $vp-1365) {
-    margin-top: 130px;
+  @media (max-width: $vp-1023) {
+    margin-top: 99px;
     min-height: 120px;
   }
 
   @media (max-width: $vp-767) {
-    margin-top: 75px;
+    margin-top: 67px;
     min-height: 283px;
   }
 }

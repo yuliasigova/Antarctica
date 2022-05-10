@@ -567,14 +567,16 @@ button,
   margin: 0 auto;
 }
 
-.wrapper {
+.page-header {
   height: 650px;
-  background: url("../../img/main-background-desktop.jpg") no-repeat top center;
+  background: url("../img/main-background-desktop.jpg") center center no-repeat;
+  background: -webkit-image-set(url("../img/main-background-desktop.webp") 1x) center center no-repeat;
+  background: image-set(url("../img/main-background-desktop.webp") 1x) center center no-repeat;
   background-size: cover;
   background-color: #002b66;
 }
 
-.page-header {
+.page-header__wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px auto;
@@ -582,9 +584,20 @@ button,
   padding-top: 35px;
 }
 
-.page-header img:hover,
-.page-header img:focus {
-  opacity: 0.8;
+[data-header=header].is-active img {
+  display: none;
+}
+
+[data-header=header].is-active .caption {
+  display: none;
+}
+
+[data-header=header].no-js img {
+  opacity: 0;
+}
+
+[data-header=header].no-js .caption {
+  margin-top: 250px;
 }
 
 .main-nav {
@@ -642,9 +655,10 @@ button,
 
 .caption {
   color: #f9fbfd;
-  position: absolute;
-  top: 17rem;
-  padding-left: 198px;
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  margin-top: 200px;
+  padding-left: 93px;
 }
 
 .caption h1 {
@@ -692,11 +706,13 @@ button,
 }
 
 .advantage {
-  margin-bottom: 112px;
+  margin-bottom: 109px;
   height: 562px;
-  background: url("../../img/background-desktop.png") no-repeat;
-  background-color: #e3ecf6;
+  background: url("../img/background-desktop.png") center center/cover no-repeat;
+  background: -webkit-image-set(url("../img/background-desktop.webp") 1x) center center/cover no-repeat;
+  background: image-set(url("../img/background-desktop.webp") 1x) center center/cover no-repeat;
   background-size: cover;
+  background-color: #e3ecf6;
 }
 
 .advantage h2 {
@@ -717,14 +733,18 @@ button,
   grid-template-columns: repeat(3, 1fr);
   margin-top: 52px;
   grid-gap: 40px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .advantage__card {
   background-color: #f9fbfd;
   padding-top: 77px;
   padding-left: 30px;
+  padding-bottom: 26px;
   padding-right: 30px;
-  min-height: 241px;
+  min-height: 100%;
   position: relative;
 }
 
@@ -803,6 +823,9 @@ button,
   grid-template-columns: repeat(auto-fit, 260px);
   grid-gap: 30px;
   padding: 0 15px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .cruises__card {
@@ -885,15 +908,16 @@ button,
   opacity: 0.8;
 }
 
-.cruises__card:focus-within .cruises__layout,
-.cruises__card:hover .cruises__layout {
+.cruises li:focus-within .cruises__layout {
   display: block;
 }
 
 .booking {
   margin-top: 123px;
   height: 555px;
-  background: url("../../img/background-form-desktop.jpg") no-repeat center;
+  background: url("../img/background-form-desktop.jpg") center center/cover no-repeat;
+  background: -webkit-image-set(url("../img/background-form-desktop.webp") 1x) center center/cover no-repeat;
+  background: image-set(url("../img/background-form-desktop.webp") 1x) center center/cover no-repeat;
   background-size: cover;
   background-color: #e3ecf6;
   position: relative;
@@ -904,12 +928,12 @@ button,
   display: grid;
   -ms-grid-columns: 560px 401px;
   grid-template-columns: 560px 401px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-top: 50px;
-  grid-column-gap: 140px;
-}
-
-.booking__container {
   padding-left: 60px;
+  padding-right: 60px;
 }
 
 .booking__container h2 {
@@ -1047,7 +1071,7 @@ button,
 }
 
 .footer {
-  margin-top: 120px;
+  margin-top: 122px;
 }
 
 .footer__contacts {
@@ -1091,7 +1115,7 @@ button,
 }
 
 .contacts__location {
-  padding-top: 72px;
+  padding-top: 74px;
 }
 
 .contacts__location p {
@@ -1145,9 +1169,7 @@ button,
   display: grid;
   -ms-grid-columns: auto 106px;
   grid-template-columns: auto 106px;
-  gap: 300px;
-  -ms-grid-row-align: center;
-  align-self: center;
+  gap: 60px;
 }
 
 .footer-nav__menu {
@@ -1156,11 +1178,6 @@ button,
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.footer-nav__menu img:hover,
-.footer-nav__menu img:focus {
-  opacity: 0.8;
 }
 
 .footer-nav__list {
@@ -1213,6 +1230,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .footer-nav__social svg {
@@ -1224,38 +1242,52 @@ button,
   opacity: 0.8;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1365px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1365px), (min-resolution: 2dppx) and (min-width: 1365px) {
-  .wrapper {
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px), (min-resolution: 2dppx) and (min-width: 1024px) {
+  .page-header {
     height: 650px;
-    background: url("../../img/main-background-desktop@2x.jpg") no-repeat top center;
+    background: url("../img/main-background-desktop@2x.jpg") center center no-repeat;
+    background: -webkit-image-set(url("../img/main-background-desktop@2x.webp") 2x) center center no-repeat;
+    background: image-set(url("../img/main-background-desktop@2x.webp") 2x) center center no-repeat;
     background-size: cover;
     background-color: #002b66;
   }
 
   .advantage {
     height: 562px;
-    background: url("../../img/background-desktop@2x.png") no-repeat;
-    background-color: #e3ecf6;
+    background: url("../img/background-desktop@2x.png") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-desktop@2x.webp") 2x) center center/cover no-repeat;
+    background: image-set(url("../img/background-desktop@2x.webp") 2x) center center/cover no-repeat;
     background-size: cover;
+    background-color: #e3ecf6;
   }
 
   .booking {
     height: 555px;
-    background: url("../../img/background-form-desktop@2x.jpg") no-repeat center;
-    background-color: #e3ecf6;
+    background: url("../img/background-form-desktop@2x.jpg") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-form-desktop@2x.webp") 2x) center center/cover no-repeat;
+    background: image-set(url("../img/background-form-desktop@2x.webp") 2x) center center/cover no-repeat;
     background-size: cover;
+    background-color: #e3ecf6;
   }
 }
 
-@media (max-width: 1365px) {
-  .wrapper {
+@media (max-width: 1023px) {
+  .container {
+    min-width: 768px;
+    max-width: 1023px;
+    padding: 0 45px;
+  }
+
+  .page-header {
     height: 638px;
-    background: url("../../img/main-background-tablet.jpg") no-repeat top center;
+    background: url("../img/main-background-tablet.jpg") center center no-repeat;
+    background: -webkit-image-set(url("../img/main-background-tablet.webp") 1x) center center no-repeat;
+    background: image-set(url("../img/main-background-tablet.webp") 1x) center center no-repeat;
     background-color: #002b66;
     background-size: cover;
   }
 
-  .page-header {
+  .page-header__wrapper {
     padding-top: 30px;
   }
 
@@ -1273,6 +1305,11 @@ button,
     line-height: 17px;
   }
 
+  .caption {
+    margin-top: 213px;
+    padding-left: 0;
+  }
+
   .caption h1 {
     font-size: 50px;
     line-height: 61px;
@@ -1284,9 +1321,9 @@ button,
   }
 
   .description {
-    margin-top: 100px;
+    margin-top: 99px;
     min-height: 264px;
-    margin-bottom: 76px;
+    margin-bottom: 80px;
   }
 
   .description h2 {
@@ -1310,7 +1347,9 @@ button,
   .advantage {
     margin-bottom: 90px;
     height: 588px;
-    background: url("../../img/background-tablet.png") no-repeat;
+    background: url("../img/background-tablet.png") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-tablet.webp") 1x) center center/cover no-repeat;
+    background: image-set(url("../img/background-tablet.webp") 1x) center center/cover no-repeat;
     background-color: #e3ecf6;
     background-size: cover;
   }
@@ -1329,7 +1368,7 @@ button,
     padding-left: 20px;
     padding-right: 0;
     padding-top: 69px;
-    min-height: 310px;
+    padding-bottom: 18px;
   }
 
   .advantage__card--liner::before {
@@ -1351,6 +1390,10 @@ button,
     height: 13px;
     top: 30px;
     left: 23px;
+  }
+
+  .advantage__card h3 {
+    width: 174px;
   }
 
   .advantage__card p {
@@ -1382,9 +1425,11 @@ button,
   .booking {
     height: 805px;
     margin-top: 112px;
-    background: url("../../img/background-form-tablet.jpg") no-repeat center;
-    background-color: #e3ecf6;
+    background: url("../img/background-form-tablet.jpg") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-form-tablet.webp") 1x) center center/cover no-repeat;
+    background: image-set(url("../img/background-form-tablet.webp") 1x) center center/cover no-repeat;
     background-size: cover;
+    background-color: #e3ecf6;
   }
 
   .booking__wrapper {
@@ -1394,6 +1439,7 @@ button,
 
   .booking__container {
     padding-left: 0;
+    padding-top: 50px;
   }
 
   .booking__container h2 {
@@ -1423,7 +1469,7 @@ button,
   }
 
   .footer__nav {
-    margin-top: 130px;
+    margin-top: 99px;
     min-height: 120px;
   }
 
@@ -1454,7 +1500,6 @@ button,
   .footer-nav__wrapper {
     -ms-grid-columns: auto 87px;
     grid-template-columns: auto 87px;
-    gap: 60px;
   }
 
   .footer-nav__menu img {
@@ -1469,39 +1514,55 @@ button,
   .footer-nav__list a {
     font-size: 12px;
     line-height: 15px;
-    margin-right: 20px;
+    margin-right: 24px;
+  }
+
+  .footer-nav__social ul {
+    padding-top: 0;
+  }
+
+  .footer-nav__social--fb svg {
+    width: 9px;
+    height: 16px;
+  }
+
+  .footer-nav__social--insta svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-nav__social--twitter svg {
+    width: 16px;
+    height: 13px;
   }
 }
 
-@media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1365px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1365px) and (min-resolution: 2dppx) {
-  .wrapper {
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), (-o-min-device-pixel-ratio: 2/1) and (max-width: 1023px), (min-resolution: 2dppx) and (max-width: 1023px) {
+  .page-header {
     height: 638px;
-    background: url("../../img/main-background-tablet@2x.jpg") no-repeat top center;
+    background: url("../img/main-background-tablet@2x.jpg") center center no-repeat;
+    background: -webkit-image-set(url("../img/main-background-tablet@2x.webp") 2x) center center no-repeat;
+    background: image-set(url("../img/main-background-tablet@2x.webp") 2x) center center no-repeat;
     background-color: #002b66;
     background-size: cover;
   }
 
   .advantage {
     height: 588px;
-    background: url("../../img/background-tablet@2x.png") no-repeat;
+    background: url("../img/background-tablet@2x.png") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-tablet@2x.webp") 2x) center center/cover no-repeat;
+    background: image-set(url("../img/background-tablet@2x.webp") 2x) center center/cover no-repeat;
     background-color: #e3ecf6;
     background-size: cover;
   }
 
   .booking {
     height: 805px;
-    background: url("../../img/background-form-tablet@2x.jpg") no-repeat center;
-    background-color: #e3ecf6;
+    background: url("../img/background-form-tablet@2x.jpg") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-form-tablet@2x.webp") 2x) center center/cover no-repeat;
+    background: image-set(url("../img/background-form-tablet@2x.webp") 2x) center center/cover no-repeat;
     background-size: cover;
-  }
-}
-
-@media (max-width: 1159px) {
-  .container {
-    min-width: 768px;
-    max-width: 1159px;
-    padding-left: 45px;
-    padding-right: 45px;
+    background-color: #e3ecf6;
   }
 }
 
@@ -1511,19 +1572,25 @@ button,
     padding: 0 15px;
   }
 
-  .wrapper {
+  .page-header {
     height: 500px;
     position: relative;
-    background: url("../../img/main-background-mobile.jpg") no-repeat top center;
+    background: url("../img/main-background-mobile.jpg") center center no-repeat;
+    background: -webkit-image-set(url("../img/main-background-mobile.webp") 1x) center center no-repeat;
+    background: image-set(url("../img/main-background-mobile.webp") 1x) center center no-repeat;
     background-color: #002b66;
     background-size: cover;
   }
 
-  .page-header {
+  .page-header__wrapper {
     padding-top: 22px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .page-header img {
@@ -1531,15 +1598,14 @@ button,
     height: 22px;
   }
 
-  [data-menu=menu].is-active,
-  [data-menu=menu].no-js {
-    height: 568px;
+  [data-menu=menu].is-active {
+    height: 100%;
     background: #f9fbfd;
     width: 285px;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 3;
   }
 
   .main-nav ul {
@@ -1611,8 +1677,19 @@ button,
     background-image: url("../img/svg/logo-menu.svg");
   }
 
+  [data-menu=menu].no-js {
+    height: 270px;
+    background: #f9fbfd;
+    width: 285px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    overflow: auto;
+  }
+
   .caption {
-    top: 11rem;
+    margin-top: 134px;
   }
 
   .caption h1 {
@@ -1656,7 +1733,9 @@ button,
   .advantage {
     margin-bottom: 55px;
     height: 997px;
-    background: url("../../img/background-mobile.png") no-repeat;
+    background: url("../img/background-mobile.png") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-mobile.webp") 1x) center center/cover no-repeat;
+    background: image-set(url("../img/background-mobile.webp") 1x) center center/cover no-repeat;
     background-color: #e3ecf6;
     background-size: cover;
   }
@@ -1668,17 +1747,8 @@ button,
   }
 
   .advantage ul {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, 290px);
     margin-top: 29px;
-  }
-
-  .advantage__card {
-    min-height: 249px;
-  }
-
-  .advantage__card h3 {
-    padding-right: 100px;
   }
 
   .advantage__card p {
@@ -1721,9 +1791,15 @@ button,
   .booking {
     height: 760px;
     margin-top: 70px;
-    background: url("../../img/background-form-mobile.jpg") no-repeat center;
-    background-color: #e3ecf6;
+    background: url("../img/background-form-mobile.jpg") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-form-mobile.webp") 1x) center center/cover no-repeat;
+    background: image-set(url("../img/background-form-mobile.webp") 1x) center center/cover no-repeat;
     background-size: cover;
+    background-color: #e3ecf6;
+  }
+
+  .booking__container {
+    padding-top: 0;
   }
 
   .booking__container h2 {
@@ -1774,7 +1850,7 @@ button,
   }
 
   .footer__nav {
-    margin-top: 75px;
+    margin-top: 67px;
     min-height: 283px;
   }
 
@@ -1837,48 +1913,45 @@ button,
     align-self: end;
     -ms-grid-column: 1;
     grid-column: 1;
-    padding-top: 10px;
+    margin-top: 10px;
   }
 
   .footer-nav__social ul {
     width: 87px;
   }
-
-  .footer-nav__social svg--fb {
-    width: 9px;
-    height: 16px;
-  }
-
-  .footer-nav__social svg--insta {
-    width: 16px;
-    height: 16px;
-  }
-
-  .footer-nav__social svg--twitter {
-    width: 16px;
-    height: 13px;
-  }
 }
 
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
-  .wrapper {
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (-o-min-device-pixel-ratio: 2/1) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
+  .page-header {
     height: 500px;
-    background: url("../../img/main-background-mobile@2x.jpg") no-repeat top center;
+    background: url("../img/main-background-mobile@2x.jpg") center center no-repeat;
+    background: -webkit-image-set(url("../img/main-background-mobile@2x.webp") 2x) center center no-repeat;
+    background: image-set(url("../img/main-background-mobile@2x.webp") 2x) center center no-repeat;
     background-color: #002b66;
     background-size: cover;
   }
 
   .advantage {
     height: 997px;
-    background: url("../../img/background-mobile@2x.png") no-repeat;
+    background: url("../img/background-mobile@2x.png") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-mobile@2x.webp") 2x) center center/cover no-repeat;
+    background: image-set(url("../img/background-mobile@2x.webp") 2x) center center/cover no-repeat;
     background-color: #e3ecf6;
     background-size: cover;
   }
 
   .booking {
     height: 760px;
-    background: url("../../img/background-form-mobile@2x.jpg") no-repeat center;
-    background-color: #e3ecf6;
+    background: url("../img/background-form-mobile@2x.jpg") center center/cover no-repeat;
+    background: -webkit-image-set(url("../img/background-form-mobile@2x.webp") 2x) center center/cover no-repeat;
+    background: image-set(url("../img/background-form-mobile@2x.webp") 2x) center center/cover no-repeat;
     background-size: cover;
+    background-color: #e3ecf6;
+  }
+}
+
+@media (hover: hover) {
+  .cruises li:hover .cruises__layout {
+    display: block;
   }
 }

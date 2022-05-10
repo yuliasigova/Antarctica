@@ -1,45 +1,51 @@
 .advantage {
-  margin-bottom: 112px;
+  margin-bottom: 109px;
   height: 562px;
-  background: url("../../img/background-desktop.png") no-repeat;
-  background-color: $color-solitude;
+  background: url("../img/background-desktop.png") center center / cover no-repeat;
+  background: image-set(url("../img/background-desktop.webp") 1x) center center / cover no-repeat;
   background-size: cover;
+  background-color: $color-solitude;
 
-  @media (min-resolution: 2dppx) and (min-width: 1365px) {
+  @media (min-resolution: 2dppx) and (min-width: 1024px) {
     height: 562px;
-    background: url("../../img/background-desktop@2x.png") no-repeat;
+    background: url("../img/background-desktop@2x.png") center center / cover no-repeat;
+    background: image-set(url("../img/background-desktop@2x.webp") 2x) center center / cover no-repeat;
+    background-size: cover;
+    background-color: $color-solitude;
+  }
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 90px;
+    height: 588px;
+    background: url("../img/background-tablet.png") center center / cover no-repeat;
+    background: image-set(url("../img/background-tablet.webp") 1x) center center / cover no-repeat;
     background-color: $color-solitude;
     background-size: cover;
   }
 
-  @media (max-width: $vp-1365) {
-    margin-bottom: 90px;
+  @media (min-resolution: 2dppx) and (max-width: $vp-1023) {
     height: 588px;
-    background: url("../../img/background-tablet.png") no-repeat;
+    background: url("../img/background-tablet@2x.png") center center / cover no-repeat;
+    background: image-set(url("../img/background-tablet@2x.webp") 2x) center center / cover no-repeat;
     background-color: $color-solitude;
     background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      height: 588px;
-      background: url("../../img/background-tablet@2x.png") no-repeat;
-      background-color: $color-solitude;
-      background-size: cover;
-    }
   }
 
   @media (max-width: $vp-767) {
     margin-bottom: 55px;
     height: 997px;
-    background: url("../../img/background-mobile.png") no-repeat;
+    background: url("../img/background-mobile.png") center center / cover no-repeat;
+    background: image-set(url("../img/background-mobile.webp") 1x) center center / cover no-repeat;
     background-color: $color-solitude;
     background-size: cover;
+  }
 
-    @media (min-resolution: 2dppx) {
-      height: 997px;
-      background: url("../../img/background-mobile@2x.png") no-repeat;
-      background-color: $color-solitude;
-      background-size: cover;
-    }
+  @media (min-resolution: 2dppx) and (max-width: $vp-767) {
+    height: 997px;
+    background: url("../img/background-mobile@2x.png") center center / cover no-repeat;
+    background: image-set(url("../img/background-mobile@2x.webp") 2x) center center / cover no-repeat;
+    background-color: $color-solitude;
+    background-size: cover;
   }
 }
 
@@ -51,7 +57,7 @@
   line-height: 42px;
   text-align: center;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     font-size: 26px;
     line-height: 39px;
     padding-top: 90px;
@@ -71,13 +77,14 @@
   grid-template-columns: repeat(3, 1fr);
   margin-top: 52px;
   grid-gap: 40px;
+  justify-content: center;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     grid-gap: 30px;
   }
 
   @media (max-width: $vp-767) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, 290px);
     margin-top: 29px;
   }
 }
@@ -86,19 +93,16 @@
   background-color: $color-alice-blue;
   padding-top: 77px;
   padding-left: 30px;
+  padding-bottom: 26px;
   padding-right: 30px;
-  min-height: 241px;
+  min-height: 100%;
   position: relative;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding-left: 20px;
     padding-right: 0;
     padding-top: 69px;
-    min-height: 310px;
-  }
-
-  @media (max-width: $vp-767) {
-    min-height: 249px;
+    padding-bottom: 18px;
   }
 
   &--liner::before {
@@ -112,7 +116,7 @@
     background-position: center;
     background-image: url("../img/svg/icon-liner.svg");
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
       width: 21px;
       height: 26px;
       top: 24px;
@@ -131,7 +135,7 @@
     background-position: center;
     background-image: url("../img/svg/icon-tick.svg");
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
       width: 33px;
       height: 19px;
       top: 26px;
@@ -150,7 +154,7 @@
     background-position: center;
     background-image: url("../img/svg/icon-ship.svg");
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
       width: 38px;
       height: 13px;
       top: 30px;
@@ -167,8 +171,8 @@
   margin-bottom: 10px;
   text-align: left;
 
-  @media (max-width: $vp-767) {
-    padding-right: 100px;
+  @media (max-width: $vp-1023) {
+    width: 174px;
   }
 }
 
@@ -177,7 +181,7 @@
   line-height: 20px;
   margin: 0;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding-right: 17px;
   }
 

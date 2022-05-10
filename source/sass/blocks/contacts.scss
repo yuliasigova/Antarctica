@@ -2,7 +2,7 @@
   position: relative;
   height: 306px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     height: 335px;
   }
 
@@ -29,7 +29,7 @@
   border: none;
   position: absolute;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     height: 335px;
   }
 
@@ -40,9 +40,9 @@
 }
 
 .contacts__location {
-  padding-top: 72px;
+  padding-top: 74px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding-top: 65px;
   }
 
@@ -59,7 +59,7 @@
   line-height: 27px;
   margin-bottom: 32px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 26px;
   }
 }
@@ -81,7 +81,7 @@
     background-position: center;
     background-image: url("../img/svg/icon-mark.svg");
 
-    @media (max-width: $vp-1365) {
+    @media (max-width: $vp-1023) {
       top: 8px;
     }
   }
@@ -107,7 +107,7 @@
 }
 
 .contacts__location span {
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     display: block;
   }
 }

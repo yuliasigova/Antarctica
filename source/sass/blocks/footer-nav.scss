@@ -1,12 +1,10 @@
 .footer-nav__wrapper {
   display: grid;
   grid-template-columns: auto 106px;
-  gap: 300px;
-  align-self: center;
+  gap: 60px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     grid-template-columns: auto 87px;
-    gap: 60px;
   }
 
   @media (max-width: $vp-767) {
@@ -27,12 +25,7 @@
 }
 
 .footer-nav__menu img {
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 38px;
     height: 20px;
   }
@@ -48,7 +41,7 @@
   align-self: center;
   margin-left: 40px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-left: 25px;
   }
 
@@ -82,10 +75,10 @@
     opacity: 0.8;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     font-size: 12px;
     line-height: 15px;
-    margin-right: 20px;
+    margin-right: 24px;
   }
 
   @media (max-width: $vp-767) {
@@ -100,7 +93,7 @@
   @media (max-width: $vp-767) {
     align-self: end;
     grid-column: 1;
-    padding-top: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -111,6 +104,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 10px;
+
+  @media (max-width: $vp-1023) {
+    padding-top: 0;
+  }
 
   @media (max-width: $vp-767) {
     width: 87px;
@@ -124,25 +122,25 @@
   &:focus {
     opacity: 0.8;
   }
+}
 
-  &--fb {
-    @media (max-width: $vp-767) {
-      width: 9px;
-      height: 16px;
-    }
+.footer-nav__social--fb svg {
+  @media (max-width: $vp-1023) {
+    width: 9px;
+    height: 16px;
   }
+}
 
-  &--insta {
-    @media (max-width: $vp-767) {
-      width: 16px;
-      height: 16px;
-    }
+.footer-nav__social--insta svg {
+  @media (max-width: $vp-1023) {
+    width: 16px;
+    height: 16px;
   }
+}
 
-  &--twitter {
-    @media (max-width: $vp-767) {
-      width: 16px;
-      height: 13px;
-    }
+.footer-nav__social--twitter svg {
+  @media (max-width: $vp-1023) {
+    width: 16px;
+    height: 13px;
   }
 }

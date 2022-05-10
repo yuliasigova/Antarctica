@@ -1,65 +1,76 @@
 .booking {
   margin-top: 123px;
   height: 555px;
-  background: url("../../img/background-form-desktop.jpg") no-repeat center;
+  background: url("../img/background-form-desktop.jpg")  center center / cover no-repeat;
+  background: image-set(url("../img/background-form-desktop.webp") 1x) center center / cover no-repeat;
   background-size: cover;
   background-color: $color-solitude;
   position: relative;
 
-  @media (min-resolution: 2dppx) and (min-width: 1365px) {
+  @media (min-resolution: 2dppx) and (min-width: 1024px) {
     height: 555px;
-    background: url("../../img/background-form-desktop@2x.jpg") no-repeat center;
-    background-color: $color-solitude;
+    background: url("../img/background-form-desktop@2x.jpg") center center / cover no-repeat;
+    background: image-set(url("../img/background-form-desktop@2x.webp") 2x) center center / cover no-repeat;
     background-size: cover;
+    background-color: $color-solitude;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     height: 805px;
     margin-top: 112px;
-    background: url("../../img/background-form-tablet.jpg") no-repeat center;
-    background-color: $color-solitude;
+    background: url("../img/background-form-tablet.jpg")  center center / cover no-repeat;
+    background: image-set(url("../img/background-form-tablet.webp") 1x) center center / cover no-repeat;
     background-size: cover;
+    background-color: $color-solitude;
+  }
 
-    @media (min-resolution: 2dppx) {
-      height: 805px;
-      background: url("../../img/background-form-tablet@2x.jpg") no-repeat center;
-      background-color: $color-solitude;
-      background-size: cover;
-    }
+  @media (min-resolution: 2dppx) and (max-width: $vp-1023) {
+    height: 805px;
+    background: url("../img/background-form-tablet@2x.jpg") center center / cover no-repeat;
+    background: image-set(url("../img/background-form-tablet@2x.webp") 2x) center center / cover no-repeat;
+    background-size: cover;
+    background-color: $color-solitude;
   }
 
   @media (max-width: $vp-767) {
     height: 760px;
     margin-top: 70px;
-    background: url("../../img/background-form-mobile.jpg") no-repeat center;
-    background-color: $color-solitude;
+    background: url("../img/background-form-mobile.jpg") center center / cover no-repeat;
+    background: image-set(url("../img/background-form-mobile.webp") 1x) center center / cover no-repeat;
     background-size: cover;
+    background-color: $color-solitude;
+  }
 
-    @media (min-resolution: 2dppx) {
-      height: 760px;
-      background: url("../../img/background-form-mobile@2x.jpg") no-repeat center;
-      background-color: $color-solitude;
-      background-size: cover;
-    }
+  @media (min-resolution: 2dppx) and (max-width: $vp-767) {
+    height: 760px;
+    background: url("../img/background-form-mobile@2x.jpg") center center / cover no-repeat;
+    background: image-set(url("../img/background-form-mobile@2x.webp") 2x) center center / cover no-repeat;
+    background-size: cover;
+    background-color: $color-solitude;
   }
 }
 
 .booking__wrapper {
   display: grid;
   grid-template-columns: 560px 401px;
+  justify-content: space-between;
   padding-top: 50px;
-  grid-column-gap: 140px;
+  padding-left: 60px;
+  padding-right: 60px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     grid-template-columns: 1fr;
   }
 }
 
 .booking__container {
-  padding-left: 60px;
-
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding-left: 0;
+    padding-top: 50px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 0;
   }
 }
 
@@ -70,7 +81,7 @@
   margin: 0;
   margin-top: 164px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-top: 34px;
     font-size: 34px;
     line-height: 51px;
@@ -90,7 +101,7 @@
   margin: 0;
   margin-top: 7px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     text-align: center;
     margin-bottom: 54px;
   }
@@ -111,7 +122,7 @@
   justify-self: center;
   box-shadow: 0 4px 45px $color-tangaroa--15;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding-top: 44px;
   }
 

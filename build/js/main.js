@@ -94,16 +94,27 @@
 /***/ (function(module, exports) {
 
 var navMain = document.querySelector('[data-menu]');
+var header = document.querySelector('[data-header]');
 
 if (navMain.classList.contains('no-js')) {
   navMain.classList.remove('no-js');
+  header.classList.remove('no-js');
 }
 
 var menuClickHandler = function menuClickHandler() {
   if (navMain) {
     var button = navMain.querySelector('button');
     button.addEventListener('click', function () {
-      return navMain.classList.toggle('is-active');
+      navMain.classList.toggle('is-active');
+      document.body.style.overflow = 'hidden';
+      document.body.style.backgroundColor = 'rgba(0, 43, 102, 0.5)';
+      header.classList.toggle('is-active');
+      navMain.style.overflow = 'auto';
+
+      if (!navMain.classList.contains('is-active')) {
+        document.body.style.overflow = 'auto';
+        document.body.style.background = 'none';
+      }
     });
   }
 };
