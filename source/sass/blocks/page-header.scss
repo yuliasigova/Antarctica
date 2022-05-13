@@ -1,12 +1,12 @@
 .page-header {
-  height: 650px;
+  min-height: 650px;
   background: url("../img/main-background-desktop.jpg") center center no-repeat;
   background: image-set(url("../img/main-background-desktop.webp") 1x) center center no-repeat;
   background-size: cover;
   background-color: $color-prussian-blue;
 
   @media (min-resolution: 2dppx) and (min-width: 1024px) {
-    height: 650px;
+    min-height: 650px;
     background: url("../img/main-background-desktop@2x.jpg") center center no-repeat;
     background: image-set(url("../img/main-background-desktop@2x.webp") 2x) center center no-repeat;
     background-size: cover;
@@ -14,7 +14,7 @@
   }
 
   @media (max-width: $vp-1023) {
-    height: 638px;
+    min-height: 638px;
     background: url("../img/main-background-tablet.jpg") center center no-repeat;
     background: image-set(url("../img/main-background-tablet.webp") 1x) center center no-repeat;
     background-color: $color-prussian-blue;
@@ -22,7 +22,7 @@
   }
 
   @media (min-resolution: 2dppx) and (max-width: $vp-1023) {
-    height: 638px;
+    min-height: 638px;
     background: url("../img/main-background-tablet@2x.jpg") center center no-repeat;
     background: image-set(url("../img/main-background-tablet@2x.webp") 2x) center center no-repeat;
     background-color: $color-prussian-blue;
@@ -30,7 +30,7 @@
   }
 
   @media (max-width: $vp-767) {
-    height: 500px;
+    min-height: 500px;
     position: relative;
     background: url("../img/main-background-mobile.jpg") center center no-repeat;
     background: image-set(url("../img/main-background-mobile.webp") 1x) center
@@ -40,7 +40,7 @@
   }
 
   @media (min-resolution: 2dppx) and (max-width: $vp-767) {
-    height: 500px;
+    min-height: 500px;
     background: url("../img/main-background-mobile@2x.jpg") center center no-repeat;
     background: image-set(url("../img/main-background-mobile@2x.webp") 2x) center center no-repeat;
     background-color: $color-prussian-blue;
@@ -51,6 +51,7 @@
 .page-header__wrapper {
   display: grid;
   grid-template-columns: 100px auto;
+  grid-template-rows: 1fr 2fr;
   padding-top: 35px;
 
   @media (max-width: $vp-1023) {

@@ -67,6 +67,7 @@
   height: 386px;
   font-size: 14px;
   display: none;
+  overflow: auto;
 
   @media (max-width: $vp-1023) {
     width: 309px;

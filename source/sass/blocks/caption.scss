@@ -1,16 +1,16 @@
 .caption {
   color: $color-alice-blue;
   grid-column: span 2;
-  margin-top: 200px;
   padding-left: 93px;
+  margin-top: 125px;
 
   @media (max-width: $vp-1023) {
-    margin-top: 213px;
+    margin-top: 128px;
     padding-left: 0;
   }
 
   @media (max-width: $vp-767) {
-    margin-top: 134px;
+    margin-top: 130px;
   }
 }
 

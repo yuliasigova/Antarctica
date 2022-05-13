@@ -1,6 +1,11 @@
 .main-nav {
-  align-self: center;
+  align-self: start;
   justify-self: right;
+  padding-top: 10px;
+
+  @media (max-width: $vp-1023) {
+    padding-top: 0;
+  }
 }
 
 [data-menu="menu"].is-active {

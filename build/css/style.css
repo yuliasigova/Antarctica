@@ -568,7 +568,7 @@ button,
 }
 
 .page-header {
-  height: 650px;
+  min-height: 650px;
   background: url("../img/main-background-desktop.jpg") center center no-repeat;
   background: -webkit-image-set(url("../img/main-background-desktop.webp") 1x) center center no-repeat;
   background: image-set(url("../img/main-background-desktop.webp") 1x) center center no-repeat;
@@ -581,6 +581,8 @@ button,
   display: grid;
   -ms-grid-columns: 100px auto;
   grid-template-columns: 100px auto;
+  -ms-grid-rows: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
   padding-top: 35px;
 }
 
@@ -601,11 +603,12 @@ button,
 }
 
 .main-nav {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
   -ms-grid-column-align: right;
   justify-self: right;
+  padding-top: 10px;
 }
 
 .main-nav ul {
@@ -657,8 +660,8 @@ button,
   color: #f9fbfd;
   -ms-grid-column-span: 2;
   grid-column: span 2;
-  margin-top: 200px;
   padding-left: 93px;
+  margin-top: 125px;
 }
 
 .caption h1 {
@@ -678,23 +681,28 @@ button,
   margin-top: 120px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr 560px;
+  grid-template-columns: 1fr 560px;
+  -ms-grid-rows: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
   margin-bottom: 120px;
+  grid-column-gap: 80px;
 }
 
 .description h2 {
   margin: 0;
-  padding-top: 55px;
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
   height: auto;
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
 }
 
 .description p {
-  margin-right: 80px;
-  margin-top: -25px;
+  margin: 0;
+  padding-top: 22px;
 }
 
 .description__layout {
@@ -707,7 +715,7 @@ button,
 
 .advantage {
   margin-bottom: 109px;
-  height: 562px;
+  min-height: 562px;
   background: url("../img/background-desktop.png") center center/cover no-repeat;
   background: -webkit-image-set(url("../img/background-desktop.webp") 1x) center center/cover no-repeat;
   background: image-set(url("../img/background-desktop.webp") 1x) center center/cover no-repeat;
@@ -862,6 +870,7 @@ button,
   height: 386px;
   font-size: 14px;
   display: none;
+  overflow: auto;
 }
 
 .cruises__layout h3 {
@@ -914,7 +923,7 @@ button,
 
 .booking {
   margin-top: 123px;
-  height: 555px;
+  min-height: 555px;
   background: url("../img/background-form-desktop.jpg") center center/cover no-repeat;
   background: -webkit-image-set(url("../img/background-form-desktop.webp") 1x) center center/cover no-repeat;
   background: image-set(url("../img/background-form-desktop.webp") 1x) center center/cover no-repeat;
@@ -1150,6 +1159,7 @@ button,
   color: #011c40;
   display: block;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .contacts__location a::before {
@@ -1176,8 +1186,17 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-  align-self: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-nav__menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .footer-nav__list {
@@ -1222,14 +1241,11 @@ button,
   list-style: none;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 28px;
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
   padding-top: 10px;
 }
 
@@ -1244,7 +1260,7 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px), (min-resolution: 2dppx) and (min-width: 1024px) {
   .page-header {
-    height: 650px;
+    min-height: 650px;
     background: url("../img/main-background-desktop@2x.jpg") center center no-repeat;
     background: -webkit-image-set(url("../img/main-background-desktop@2x.webp") 2x) center center no-repeat;
     background: image-set(url("../img/main-background-desktop@2x.webp") 2x) center center no-repeat;
@@ -1253,7 +1269,7 @@ button,
   }
 
   .advantage {
-    height: 562px;
+    min-height: 562px;
     background: url("../img/background-desktop@2x.png") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-desktop@2x.webp") 2x) center center/cover no-repeat;
     background: image-set(url("../img/background-desktop@2x.webp") 2x) center center/cover no-repeat;
@@ -1262,7 +1278,7 @@ button,
   }
 
   .booking {
-    height: 555px;
+    min-height: 555px;
     background: url("../img/background-form-desktop@2x.jpg") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-form-desktop@2x.webp") 2x) center center/cover no-repeat;
     background: image-set(url("../img/background-form-desktop@2x.webp") 2x) center center/cover no-repeat;
@@ -1271,15 +1287,18 @@ button,
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1250px) {
   .container {
     min-width: 768px;
-    max-width: 1023px;
-    padding: 0 45px;
+    max-width: 1250px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
+}
 
+@media (max-width: 1023px) {
   .page-header {
-    height: 638px;
+    min-height: 638px;
     background: url("../img/main-background-tablet.jpg") center center no-repeat;
     background: -webkit-image-set(url("../img/main-background-tablet.webp") 1x) center center no-repeat;
     background: image-set(url("../img/main-background-tablet.webp") 1x) center center no-repeat;
@@ -1296,6 +1315,10 @@ button,
     height: 20px;
   }
 
+  .main-nav {
+    padding-top: 0;
+  }
+
   .main-nav li {
     margin-right: 23px;
   }
@@ -1306,7 +1329,7 @@ button,
   }
 
   .caption {
-    margin-top: 213px;
+    margin-top: 128px;
     padding-left: 0;
   }
 
@@ -1321,32 +1344,36 @@ button,
   }
 
   .description {
-    margin-top: 99px;
-    min-height: 264px;
-    margin-bottom: 80px;
+    -ms-grid-columns: 1fr 324px;
+    grid-template-columns: 1fr 324px;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 93px;
+    margin-bottom: 93px;
+    grid-column-gap: 30px;
   }
 
   .description h2 {
     font-size: 26px;
     line-height: 36px;
-    padding-top: 0;
-    width: 205px;
-    margin-top: -8px;
+    padding-right: 117px;
   }
 
   .description p {
-    margin-right: 30px;
-    margin-top: 14px;
+    padding-top: 15px;
   }
 
   .description__layout {
     width: 324px;
     height: 264px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .advantage {
     margin-bottom: 90px;
-    height: 588px;
+    min-height: 588px;
     background: url("../img/background-tablet.png") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-tablet.webp") 1x) center center/cover no-repeat;
     background: image-set(url("../img/background-tablet.webp") 1x) center center/cover no-repeat;
@@ -1423,7 +1450,7 @@ button,
   }
 
   .booking {
-    height: 805px;
+    min-height: 805px;
     margin-top: 112px;
     background: url("../img/background-form-tablet.jpg") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-form-tablet.webp") 1x) center center/cover no-repeat;
@@ -1518,7 +1545,7 @@ button,
   }
 
   .footer-nav__social ul {
-    padding-top: 0;
+    grid-column-gap: 20px;
   }
 
   .footer-nav__social--fb svg {
@@ -1539,7 +1566,7 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1023px), (-o-min-device-pixel-ratio: 2/1) and (max-width: 1023px), (min-resolution: 2dppx) and (max-width: 1023px) {
   .page-header {
-    height: 638px;
+    min-height: 638px;
     background: url("../img/main-background-tablet@2x.jpg") center center no-repeat;
     background: -webkit-image-set(url("../img/main-background-tablet@2x.webp") 2x) center center no-repeat;
     background: image-set(url("../img/main-background-tablet@2x.webp") 2x) center center no-repeat;
@@ -1548,7 +1575,7 @@ button,
   }
 
   .advantage {
-    height: 588px;
+    min-height: 588px;
     background: url("../img/background-tablet@2x.png") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-tablet@2x.webp") 2x) center center/cover no-repeat;
     background: image-set(url("../img/background-tablet@2x.webp") 2x) center center/cover no-repeat;
@@ -1557,7 +1584,7 @@ button,
   }
 
   .booking {
-    height: 805px;
+    min-height: 805px;
     background: url("../img/background-form-tablet@2x.jpg") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-form-tablet@2x.webp") 2x) center center/cover no-repeat;
     background: image-set(url("../img/background-form-tablet@2x.webp") 2x) center center/cover no-repeat;
@@ -1573,7 +1600,7 @@ button,
   }
 
   .page-header {
-    height: 500px;
+    min-height: 500px;
     position: relative;
     background: url("../img/main-background-mobile.jpg") center center no-repeat;
     background: -webkit-image-set(url("../img/main-background-mobile.webp") 1x) center center no-repeat;
@@ -1689,7 +1716,7 @@ button,
   }
 
   .caption {
-    margin-top: 134px;
+    margin-top: 130px;
   }
 
   .caption h1 {
@@ -1704,9 +1731,14 @@ button,
   }
 
   .description {
-    -ms-grid-rows: (auto)[3];
-    grid-template-rows: repeat(3, auto);
-    margin-top: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 58px;
     margin-bottom: 66px;
   }
 
@@ -1714,11 +1746,15 @@ button,
     line-height: 34px;
     margin-bottom: 16px;
     letter-spacing: -1px;
+    padding-right: 90px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .description p {
-    margin: 0;
     margin-bottom: 33px;
+    padding-top: 0;
   }
 
   .description__layout {
@@ -1732,7 +1768,7 @@ button,
 
   .advantage {
     margin-bottom: 55px;
-    height: 997px;
+    min-height: 997px;
     background: url("../img/background-mobile.png") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-mobile.webp") 1x) center center/cover no-repeat;
     background: image-set(url("../img/background-mobile.webp") 1x) center center/cover no-repeat;
@@ -1789,7 +1825,7 @@ button,
   }
 
   .booking {
-    height: 760px;
+    min-height: 760px;
     margin-top: 70px;
     background: url("../img/background-form-mobile.jpg") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-form-mobile.webp") 1x) center center/cover no-repeat;
@@ -1846,7 +1882,7 @@ button,
   .footer__contacts {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
-    gap: 36px;
+    gap: 16px;
   }
 
   .footer__nav {
@@ -1889,6 +1925,11 @@ button,
     align-self: start;
   }
 
+  .footer-nav__menu a {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
   .footer-nav__menu img {
     width: 42px;
     height: 22px;
@@ -1913,7 +1954,6 @@ button,
     align-self: end;
     -ms-grid-column: 1;
     grid-column: 1;
-    margin-top: 10px;
   }
 
   .footer-nav__social ul {
@@ -1923,7 +1963,7 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (-o-min-device-pixel-ratio: 2/1) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
   .page-header {
-    height: 500px;
+    min-height: 500px;
     background: url("../img/main-background-mobile@2x.jpg") center center no-repeat;
     background: -webkit-image-set(url("../img/main-background-mobile@2x.webp") 2x) center center no-repeat;
     background: image-set(url("../img/main-background-mobile@2x.webp") 2x) center center no-repeat;
@@ -1932,7 +1972,7 @@ button,
   }
 
   .advantage {
-    height: 997px;
+    min-height: 997px;
     background: url("../img/background-mobile@2x.png") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-mobile@2x.webp") 2x) center center/cover no-repeat;
     background: image-set(url("../img/background-mobile@2x.webp") 2x) center center/cover no-repeat;
@@ -1941,7 +1981,7 @@ button,
   }
 
   .booking {
-    height: 760px;
+    min-height: 760px;
     background: url("../img/background-form-mobile@2x.jpg") center center/cover no-repeat;
     background: -webkit-image-set(url("../img/background-form-mobile@2x.webp") 2x) center center/cover no-repeat;
     background: image-set(url("../img/background-form-mobile@2x.webp") 2x) center center/cover no-repeat;

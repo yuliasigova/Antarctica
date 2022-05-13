@@ -1,6 +1,6 @@
 .booking {
   margin-top: 123px;
-  height: 555px;
+  min-height: 555px;
   background: url("../img/background-form-desktop.jpg")  center center / cover no-repeat;
   background: image-set(url("../img/background-form-desktop.webp") 1x) center center / cover no-repeat;
   background-size: cover;
@@ -8,7 +8,7 @@
   position: relative;
 
   @media (min-resolution: 2dppx) and (min-width: 1024px) {
-    height: 555px;
+    min-height: 555px;
     background: url("../img/background-form-desktop@2x.jpg") center center / cover no-repeat;
     background: image-set(url("../img/background-form-desktop@2x.webp") 2x) center center / cover no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
   }
 
   @media (max-width: $vp-1023) {
-    height: 805px;
+    min-height: 805px;
     margin-top: 112px;
     background: url("../img/background-form-tablet.jpg")  center center / cover no-repeat;
     background: image-set(url("../img/background-form-tablet.webp") 1x) center center / cover no-repeat;
@@ -25,7 +25,7 @@
   }
 
   @media (min-resolution: 2dppx) and (max-width: $vp-1023) {
-    height: 805px;
+    min-height: 805px;
     background: url("../img/background-form-tablet@2x.jpg") center center / cover no-repeat;
     background: image-set(url("../img/background-form-tablet@2x.webp") 2x) center center / cover no-repeat;
     background-size: cover;
@@ -33,7 +33,7 @@
   }
 
   @media (max-width: $vp-767) {
-    height: 760px;
+    min-height: 760px;
     margin-top: 70px;
     background: url("../img/background-form-mobile.jpg") center center / cover no-repeat;
     background: image-set(url("../img/background-form-mobile.webp") 1x) center center / cover no-repeat;
@@ -42,7 +42,7 @@
   }
 
   @media (min-resolution: 2dppx) and (max-width: $vp-767) {
-    height: 760px;
+    min-height: 760px;
     background: url("../img/background-form-mobile@2x.jpg") center center / cover no-repeat;
     background: image-set(url("../img/background-form-mobile@2x.webp") 2x) center center / cover no-repeat;
     background-size: cover;

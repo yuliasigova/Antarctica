@@ -1,13 +1,13 @@
 .advantage {
   margin-bottom: 109px;
-  height: 562px;
+  min-height: 562px;
   background: url("../img/background-desktop.png") center center / cover no-repeat;
   background: image-set(url("../img/background-desktop.webp") 1x) center center / cover no-repeat;
   background-size: cover;
   background-color: $color-solitude;
 
   @media (min-resolution: 2dppx) and (min-width: 1024px) {
-    height: 562px;
+    min-height: 562px;
     background: url("../img/background-desktop@2x.png") center center / cover no-repeat;
     background: image-set(url("../img/background-desktop@2x.webp") 2x) center center / cover no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
 
   @media (max-width: $vp-1023) {
     margin-bottom: 90px;
-    height: 588px;
+    min-height: 588px;
     background: url("../img/background-tablet.png") center center / cover no-repeat;
     background: image-set(url("../img/background-tablet.webp") 1x) center center / cover no-repeat;
     background-color: $color-solitude;
@@ -24,7 +24,7 @@
   }
 
   @media (min-resolution: 2dppx) and (max-width: $vp-1023) {
-    height: 588px;
+    min-height: 588px;
     background: url("../img/background-tablet@2x.png") center center / cover no-repeat;
     background: image-set(url("../img/background-tablet@2x.webp") 2x) center center / cover no-repeat;
     background-color: $color-solitude;
@@ -33,7 +33,7 @@
 
   @media (max-width: $vp-767) {
     margin-bottom: 55px;
-    height: 997px;
+    min-height: 997px;
     background: url("../img/background-mobile.png") center center / cover no-repeat;
     background: image-set(url("../img/background-mobile.webp") 1x) center center / cover no-repeat;
     background-color: $color-solitude;
@@ -41,7 +41,7 @@
   }
 
   @media (min-resolution: 2dppx) and (max-width: $vp-767) {
-    height: 997px;
+    min-height: 997px;
     background: url("../img/background-mobile@2x.png") center center / cover no-repeat;
     background: image-set(url("../img/background-mobile@2x.webp") 2x) center center / cover no-repeat;
     background-color: $color-solitude;
