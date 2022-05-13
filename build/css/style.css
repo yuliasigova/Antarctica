@@ -683,10 +683,10 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 560px;
   grid-template-columns: 1fr 560px;
-  -ms-grid-rows: 1fr 2fr;
-  grid-template-rows: 1fr 2fr;
+  -ms-grid-rows: auto 2fr;
+  grid-template-rows: auto 2fr;
   margin-bottom: 120px;
-  grid-column-gap: 80px;
+  grid-column-gap: 6vw;
 }
 
 .description h2 {
@@ -694,10 +694,10 @@ button,
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  height: auto;
-  -ms-flex-item-align: end;
-  -ms-grid-row-align: end;
-  align-self: end;
+  padding-top: 58px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .description p {
@@ -744,6 +744,7 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .advantage__card {
@@ -1356,6 +1357,7 @@ button,
   .description h2 {
     font-size: 26px;
     line-height: 36px;
+    padding-top: 0;
     padding-right: 117px;
   }
 
@@ -1747,9 +1749,6 @@ button,
     margin-bottom: 16px;
     letter-spacing: -1px;
     padding-right: 90px;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
   }
 
   .description p {
